@@ -25,7 +25,7 @@ API_HASH = environ.get("API_HASH", "")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 
 PICS = (environ.get('PICS', 'https://graph.org/file/3688b40ad4a38da0efed0-47f7fd426ede18b264.jpg')).split() # Bot Start Picture
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '821215952').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5654093580').split()]
 BOT_USERNAME = environ.get("BOT_USERNAME", "Dark_Share1Bot") # without @
 PORT = environ.get("PORT", "8080")
 
