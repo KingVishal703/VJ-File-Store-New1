@@ -27,7 +27,7 @@ BOT_TOKEN = environ.get("BOT_TOKEN", "")
 PICS = (environ.get('PICS', 'https://graph.org/file/3688b40ad4a38da0efed0-47f7fd426ede18b264.jpg')).split() # Bot Start Picture
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5654093580').split()]
 BOT_USERNAME = environ.get("BOT_USERNAME", "Dark_Share1Bot") # without @
-PORT = environ.get("PORT", "8080")
+PORT = environ.get("PORT", "80")
 
 # Clone Info :-
 CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
@@ -62,7 +62,7 @@ VERIFY_MODE = bool(environ.get('VERIFY_MODE', True)) # Set True or False
 
 # If Verify Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 SHORTLINK_URL = environ.get("SHORTLINK_URL", "linkshortify.com") # shortlink domain without https://
-SHORTLINK_API = environ.get("SHORTLINK_API", "l6a2d40396cd144b9d6c334be279bd495e0d4b895") # shortlink api
+SHORTLINK_API = environ.get("SHORTLINK_API", "6a2d40396cd144b9d6c334be279bd495e0d4b895") # shortlink api
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/hentai_Hanime_Update_Channel/39") # how to open link 
 
 # Website Info:
