@@ -27,7 +27,7 @@ BOT_TOKEN = environ.get("BOT_TOKEN", "")
 PICS = (environ.get('PICS', 'https://telegra.ph/file/f198e9233986d61549659.jpg')).split() # Bot Start Picture
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1029462448').split()]
 BOT_USERNAME = environ.get("BOT_USERNAME", "Anime_X_sharing_Bot") # without @
-PORT = environ.get("PORT", "80")
+PORT = environ.get("PORT", "8080")
 
 # Clone Info :-
 CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
@@ -82,7 +82,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://aesthetic-sorcha-movies1234-00d7c1d0.koyeb.app/")
 
 
 # Don't Remove Credit Tg - @VJ_Botz
