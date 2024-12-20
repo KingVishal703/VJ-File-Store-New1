@@ -20,7 +20,7 @@ Special Advantage If This Bot Got Banned, Your Link Will Never Expire, So Just S
 # Ask Doubt on telegram @KingVJ01
 
     
-    CAPTION = """<b>📂 AnimeName : {file_name} @Anime_movies_V
+    CAPTION = """<b>📂 {file_name} @Anime_movies_V
 
 sɪᴢᴇ ⚙️: {file_size}
 
