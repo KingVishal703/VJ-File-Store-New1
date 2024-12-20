@@ -24,7 +24,7 @@ Special Advantage If This Bot Got Banned, Your Link Will Never Expire, So Just S
 
 sɪᴢᴇ ⚙️: {file_size}
 
-Jᴏɪɴ Now ➠ [ANIME UPDATE CHANNEL](https://t.me/hentai_Hanime_Update_Channel)</b>""" 
+Jᴏɪɴ Now ➠ [ANIME UPDATE CHANNEL](https://t.me/+yh-PA5Mfitc2YTI1)</b>""" 
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
