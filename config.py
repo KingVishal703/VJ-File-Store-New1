@@ -61,8 +61,8 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), Fals
 VERIFY_MODE = bool(environ.get('VERIFY_MODE', False)) # Set True or False
 
 # If Verify Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "omegalinks.in") # shortlink domain without https://
-SHORTLINK_API = environ.get("SHORTLINK_API", "0178e6bc620a16f5ffe5e210731a2c8a375b102f") # shortlink api
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "earnfly.net") # shortlink domain without https://
+SHORTLINK_API = environ.get("SHORTLINK_API", "0b63de69536320bfca114723c7eabfdabfe90e15") # shortlink api
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/hentai_Hanime_Update_Channel/40") # how to open link 
 
 # Website Info:
