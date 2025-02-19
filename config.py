@@ -58,7 +58,7 @@ BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), False)
 
 # Verify Info :-
-VERIFY_MODE = bool(environ.get('VERIFY_MODE', True)) # Set True or False
+VERIFY_MODE = bool(environ.get('VERIFY_MODE', False)) # Set True or False
 
 # If Verify Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 SHORTLINK_URL = environ.get("SHORTLINK_URL", "sharedisklinks.com") # shortlink domain without https://
@@ -69,7 +69,7 @@ VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/How_To_Open_AllLi
 WEBSITE_URL_MODE = bool(environ.get('WEBSITE_URL_MODE', True)) # Set True or False
 
 # If Website Url Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
-WEBSITE_URL = environ.get("WEBSITE_URL", "https://technologygyanallinone.blogspot.com/2025/01/top-5-software-apps-to-boost.html") # For More Information Check Video On Yt - @Tech_VJ
+WEBSITE_URL = environ.get("WEBSITE_URL", "https://www.moviesking.in.net/2025/01/tech-gadgets-that-will-take-your.html") # For More Information Check Video On Yt - @Tech_VJ
 
 # File Stream Config
 STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or False
