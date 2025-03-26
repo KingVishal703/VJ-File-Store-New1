@@ -20,11 +20,11 @@ Special Advantage If This Bot Got Banned, Your Link Will Never Expire, So Just S
 # Ask Doubt on telegram @KingVJ01
 
     
-    CAPTION = """<b>📂 {file_name} @Anime_movies_V
+    CAPTION = """<b>📂 {file_name} @Hindi_Anime_backup_channel
 
 sɪᴢᴇ ⚙️: {file_size}
 
-Jᴏɪɴ Now ➠ [ANIME UPDATE CHANNEL](https://t.me/+yh-PA5Mfitc2YTI1)</b>""" 
+Jᴏɪɴ Now ➠ [ANIME UPDATE CHANNEL](https://telegram.me/+_KbIuqcdVe9lNGU1)</b>""" 
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
