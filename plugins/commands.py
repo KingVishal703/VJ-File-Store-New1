@@ -21,7 +21,7 @@ import json
 import base64
 from urllib.parse import quote_plus
 from TechVJ.utils.file_properties import get_name, get_hash, get_media_file_size
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("commands")
 
 BATCH_FILES = {}
 
@@ -365,6 +365,7 @@ async def start(client, message):
 
 @Client.on_message(filters.command('api') & filters.private)
 async def shortener_api_handler(client, m: Message):
+NameError: name 'Message' is not defined
     user_id = m.from_user.id
     user = await get_user(user_id)
     cmd = m.command
