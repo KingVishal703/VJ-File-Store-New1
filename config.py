@@ -20,8 +20,8 @@ def is_enabled(value, default):
 AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002264586785').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
         
 # Bot Information
-API_ID = int(environ.get("API_ID", "25452590"))
-API_HASH = environ.get("API_HASH", "7ccce409c7280e0153521df4458df7e3")
+API_ID = int(environ.get("API_ID", "28277662"))
+API_HASH = environ.get("API_HASH", "367b38674199ccc72629d43f7c073662")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 
 PICS = (environ.get('PICS', 'https://telegra.ph/file/f198e9233986d61549659.jpg')).split() # Bot Start Picture
