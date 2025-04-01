@@ -1,4 +1,7 @@
-from pyrogram.types import Message
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
+
 import os
 import logging
 import random
@@ -34,6 +37,11 @@ async def is_subscribed(bot, query, channel):
             pass
     return btn
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
+
+
 def get_size(size):
     """Get size in readable format"""
 
@@ -44,6 +52,10 @@ def get_size(size):
         i += 1
         size /= 1024.0
     return "%.2f %s" % (size, units[i])
+
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ0
 
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -57,7 +69,7 @@ async def start(client, message):
                     btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{username}?start={message.command[1]}")])
                 else:
                     btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{username}?start=true")])
-                await message.reply_text(text=f"<b>👋 Hello {message.from_user.mention}, कृपया नीचे दीऐ गये चैनल को join करों और Try again बटन पर क्लिक करें। 🙂\n\n Please join the channel then click on try again button. 😇</b>", reply_markup=InlineKeyboardMarkup(btn))
+                await message.reply_text(text=f"<b>👋 Hello {message.from_user.mention},\n\nPlease join the channel then click on try again button. 😇</b>", reply_markup=InlineKeyboardMarkup(btn))
                 return
         except Exception as e:
             print(e)
@@ -66,16 +78,14 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [
-            # [
-            # InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
-            # ],
-            [
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/+K57B1ypoxfM2NmE9')
+        buttons = [[
+            InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Xeonbots')
             ],[
-            InlineKeyboardButton('💁‍♀️ Info', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Xeonbots'),
+            InlineKeyboardButton('🍿 Mᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Xeonflix')
+            ],[
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         if CLONE_MODE == True:
             buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
@@ -88,6 +98,9 @@ async def start(client, message):
         )
         return
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
     
     data = message.command[1]
     try:
@@ -106,13 +119,13 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await message.reply_text(
-                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nअब आप 24 घनटे तक सभी वीडियो देख सकते है.</b>",
+                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all files till today midnight.</b>",
                 protect_content=True
             )
             await verify_user(client, userid, token)
         else:
             return await message.reply_text(
-                text="<b>Invalid link or Expired link Try Again !</b>",
+                text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
     elif data.split("-", 1)[0] == "BATCH":
@@ -124,7 +137,7 @@ async def start(client, message):
                     InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
                 ]]
                 await message.reply_text(
-                    text="<b>आपने आज वेरीफाई नहीं किया है। \n\n दिन में एक बार वेरीफाई करें और 24 घंटे के लिए फ्री में वीडियो देखें। \n\n\n\n You have not verified today. Verify once a day and watch videos free for 24 hours. !</b>",
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -177,12 +190,12 @@ async def start(client, message):
                         quote=True,
                         disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                                                            InlineKeyboardButton('🖥️ Stream online 🖥️', url=stream)]])  # web stream Link
+                                                            InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
                     )
                 if STREAM_MODE == True:
                     button = [[
                         InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                        InlineKeyboardButton('🖥️ Stream online 🖥️', url=stream)
+                        InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
                     ],[
                         InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
                     ]]
@@ -215,16 +228,19 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         if AUTO_DELETE_MODE == True:
-            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️IMPORTANT❗️</u></b>\n\n This File will be deleted Within <b><u>{AUTO_DELETE} Minutes</u>  <i></b>(Due to Copyright Issues)</i>.\n\n<b>So,You Are Requested to Forward The File to Saved Messages </b>")
+            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
             await asyncio.sleep(AUTO_DELETE_TIME)
             for x in filesarr:
                 try:
                     await x.delete()
                 except:
                     pass
-            await k.edit_text("<b>File deleted successfully. You are Always wellcomed to Request Again</b>")
+            await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
 
     files_ = await get_file_details(file_id)           
     if not files_:
@@ -236,7 +252,7 @@ async def start(client, message):
                 InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
             ]]
             await message.reply_text(
-                text="<b>आपने आज वेरीफाई नहीं किया है। \n\n दिन में एक बार वेरीफाई करें और 24 घंटे के लिए फ्री में वीडियो देखें। \n\n\n\n You have not verified today. Verify once a day and watch videos free for 24 hours. !</b>",
+                text="<b>You are not verified !\nKindly verify to continue !</b>",
                 protect_content=True,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
@@ -249,7 +265,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = ' ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -261,31 +277,34 @@ async def start(client, message):
             await msg.edit_caption(f_caption)
             if STREAM_MODE == True:
                 g = await msg.reply_text(
-                    text=f"•• Generate a fast download or stream link for your file by clicking the button below 👇",
+                    text=f"**•• ʏᴏᴜ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ ᴏғ ʏᴏᴜʀ ғɪʟᴇ ᴀɴᴅ ᴀʟsᴏ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ғɪʟᴇ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇**",
                     quote=True,
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('🚀 Fast Download / Stream Online🖥️', callback_data=f'generate_stream_link:{file_id}')
+                                InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}')
                             ]
                         ]
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️IMPORTANT❗️</u></b>\n\n This File will be deleted Within <b><u>{AUTO_DELETE} Minutes</u>  <i></b>(Due to Copyright Issues)</i>.\n\n<b>So,You Are Requested to Forward The File to Saved Messages </b>")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
                 except:
                     pass
                 await g.delete()
-                await k.edit_text("<b>File deleted successfully. You are Always wellcomed to Request Again</b>")
+                await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
         except:
             pass
         return await message.reply('No such file exist.')
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
     
     files = files_[0]
     title = files.file_name
@@ -306,7 +325,7 @@ async def start(client, message):
             InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
         ]]
         await message.reply_text(
-            text="<b>आपने आज वेरीफाई नहीं किया है। \n\n दिन में एक बार वेरीफाई करें और 24 घंटे के लिए फ्री में वीडियो देखें। \n\n\n\n You have not verified today. Verify once a day and watch videos free for 24 hours. !</b>",
+            text="<b>You are not verified !\nKindly verify to continue !</b>",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -319,7 +338,7 @@ async def start(client, message):
     )
     if STREAM_MODE == True:
         g = await x.reply_text(
-            text=f"**••ɢᴇɴᴇʀᴀᴛᴇ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ ᴏғ ʏᴏᴜʀ ғɪʟᴇ & ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ By ᴄʟɪᴄᴋɪɴɢ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇**",
+            text=f"**•• ʏᴏᴜ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ ᴏғ ʏᴏᴜʀ ғɪʟᴇ ᴀɴᴅ ᴀʟsᴏ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ғɪʟᴇ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇**",
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -331,15 +350,18 @@ async def start(client, message):
             )
         )
     if AUTO_DELETE_MODE == True:
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️IMPORTANT❗️</u></b>\n\n This File will be deleted Within <b><u>{AUTO_DELETE} Minutes</u>  <i></b>(Due to Copyright Issues)</i>.\n\n<b>So,You Are Requested to Forward The File to Saved Messages </b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
         await asyncio.sleep(AUTO_DELETE_TIME)
         try:
             await x.delete()
         except:
             pass
-        await k.edit_text("<b> File deleted successfully!</b>")       
+        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")       
         
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
 
 @Client.on_message(filters.command('api') & filters.private)
 async def shortener_api_handler(client, m: Message):
@@ -356,6 +378,9 @@ async def shortener_api_handler(client, m: Message):
         await update_user_info(user_id, {"shortener_api": api})
         await m.reply("<b>Shortener API updated successfully to</b> " + api)
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
 
 @Client.on_message(filters.command("base_site") & filters.private)
 async def base_site_handler(client, m: Message):
@@ -376,6 +401,9 @@ async def base_site_handler(client, m: Message):
         await update_user_info(user_id, {"base_site": base_site})
         await m.reply("<b>Base Site updated successfully</b>")
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -399,22 +427,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
 
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
     
     elif query.data == "start":
-        buttons = [
-            # [
-            # InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
-            # ],
-            [
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/+K57B1ypoxfM2NmE9')
-            ],
-            # [
-            # InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')
-            # ],
-            [
-            InlineKeyboardButton('💁‍♀️ Info', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
+        buttons = [[
+            InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Xeonbots')
+            ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Xeonbots'),
+            InlineKeyboardButton('🍿 Mᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Xeonflix')
+            ],[
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -423,27 +448,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
-        me2 = (await client.get_me()).mention
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, me2),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-
-    
-    elif query.data == "clone":
-        buttons = [[
-            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
-        ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.CLONE_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-                    )
+        me2 = (await cl
