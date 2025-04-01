@@ -207,4 +207,4 @@ async def start(client, message):
             await asyncio.sleep(1)
         await sts.delete()
         if AUTO_DELETE_MODE:
-            k = await client.send_message(chat_id=message.from_user.id, text=f"<b><u>❗️❗️❗
+            k = await client.send_message(chat_id=message.from_user.id, text=f"<b><u>❗️❗️❗</u></b>")
