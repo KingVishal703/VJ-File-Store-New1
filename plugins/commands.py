@@ -1,4 +1,4 @@
-
+from pyrogram.types import Message
 import os
 import logging
 import random
